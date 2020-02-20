@@ -1,0 +1,277 @@
+#include<stdio.h>
+
+int main()
+{
+    FILE *a;
+    a=fopen("ticket.txt","w");
+    int p,t,c,b,po,o;
+    printf("\n\n\n *** Restaurante Los Cuscos *** \n\n\n Menu \n\n  Comida \n\n  Bebida \n\n  Postre \n\n\n\n");
+    printf("  Comida  \n Que desea ordenar? \n\n 1) Pozole $100 \n 2) Tacos dorados de pollo $60 \n 3) Chilaquiles $80\n");
+
+    scanf("%d",&c);
+    switch(c)
+    {
+    case 1:
+        c=100;
+        printf("  Bebida  \n Que desea ordenar? \n\n 1) Refresco $30 \n 2) Cerveza $60 \n 3) Agua de sabor $20\n");
+        scanf("%d",&b);
+        switch(b)
+        {
+        case 1:
+            b=30;
+            printf("  Postre  \n Que desea ordenar? \n\n 1) Pastel de chocolate $100 \n 2) Arroz con Leche $60 \n 3) Jiricalla $80\n");
+        scanf("%d",&p);
+        switch(p)
+        {
+           case 1:
+            p=100;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Pozole $%d \n\n Refresco $%d \n\n Pastel de Chocolate $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 2:
+            p=60;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Pozole $%d \n\n Refresco $%d \n\n Arroz con Leche $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 3:
+            p=80;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Pozole $%d \n\n Refresco $%d \n\n Jiricalla $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+        }
+        break;
+        case 2:
+            b=60;
+            printf("  Postre  \n Que desea ordenar? \n\n 1) Pastel de chocolate $100 \n 2) Arroz con Leche $60 \n 3) Jiricalla $80\n");
+        scanf("%d",&p);
+        switch(p)
+        {
+           case 1:
+            p=100;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Pozole $%d \n\n Cerveza $%d \n\n Pastel de Chocolate $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 2:
+            p=60;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Pozole $%d \n\n Cerveza $%d \n\n Arroz con Leche $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 3:
+            p=80;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Pozole $%d \n\n Cerveza $%d \n\n Jiricalla $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+        }
+        break;
+        case 3:
+            b=20;
+            printf("  Postre  \n Que desea ordenar? \n\n 1) Pastel de chocolate $100 \n 2) Arroz con Leche $60 \n 3) Jiricalla $80\n");
+        scanf("%d",&p);
+        switch(p)
+        {
+           case 1:
+            p=100;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Pozole $%d \n\n Agua de Sabor $%d \n\n Pastel de Chocolate $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 2:
+            p=60;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Pozole $%d \n\n Agua de Sabor $%d \n\n Arroz con Leche $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 3:
+            p=80;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Pozole $%d \n\n Agua de Sabor $%d \n\n Jiricalla $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+        }
+        break;
+        }
+        break;
+     case 2:
+        c=60;
+        printf("  Bebida  \n Que desea ordenar? \n\n 1) Refresco $30 \n 2) Cerveza $60 \n 3) Agua de sabor $20\n");
+        scanf("%d",&b);
+        switch(b)
+        {
+        case 1:
+            b=30;
+            printf("  Postre  \n Que desea ordenar? \n\n 1) Pastel de chocolate $100 \n 2) Arroz con Leche $60 \n 3) Jiricalla $80\n");
+        scanf("%d",&p);
+        switch(p)
+        {
+           case 1:
+            p=100;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Tacos dorados de pollo $%d \n\n Refresco $%d \n\n Pastel de Chocolate $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 2:
+            p=60;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Tacos dorados de pollo $%d \n\n Refresco $%d \n\n Arroz con Leche $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 3:
+            p=80;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Tacos dorados de pollo $%d \n\n Refresco $%d \n\n Jiricalla $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+        }
+        break;
+        case 2:
+            b=60;
+            printf("  Postre  \n Que desea ordenar? \n\n 1) Pastel de chocolate $100 \n 2) Arroz con Leche $60 \n 3) Jiricalla $80\n");
+        scanf("%d",&p);
+        switch(p)
+        {
+           case 1:
+            p=100;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Tacos dorados de pollo $%d \n\n Cerveza $%d \n\n Pastel de Chocolate $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 2:
+            p=60;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Tacos dorados de pollo $%d \n\n Cerveza $%d \n\n Arroz con Leche $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 3:
+            p=80;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Tacos dorados de pollo $%d \n\n Cerveza $%d \n\n Jiricalla $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+        }
+        break;
+        case 3:
+            b=20;
+            printf("  Postre  \n Que desea ordenar? \n\n 1) Pastel de chocolate $100 \n 2) Arroz con Leche $60 \n 3) Jiricalla $80\n");
+            break;
+        scanf("%d",&p);
+        switch(p)
+        {
+           case 1:
+            p=100;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Tacos dorados de pollo $%d \n\n Agua de Sabor $%d \n\n Pastel de Chocolate $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 2:
+            p=60;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Tacos dorados de pollo $%d \n\n Agua de Sabor $%d \n\n Arroz con Leche $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 3:
+            p=80;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Tacos dorados de pollo $%d \n\n Agua de Sabor $%d \n\n Jiricalla $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+        }
+        break;
+        }
+        break;
+     case 3:
+        c=80;
+        printf("  Bebida  \n Que desea ordenar? \n\n 1) Refresco $30 \n 2) Cerveza $60 \n 3) Agua de sabor $20\n");
+        scanf("%d",&b);
+        switch(b)
+        {
+        case 1:
+            b=30;
+            printf("  Postre  \n Que desea ordenar? \n\n 1) Pastel de chocolate $100 \n 2) Arroz con Leche $60 \n 3) Jiricalla $80\n");
+        scanf("%d",&p);
+        switch(p)
+        {
+           case 1:
+            p=100;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Chilaquiles $%d \n\n Refresco $%d \n\n Pastel de Chocolate $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 2:
+            p=60;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Chilaquiles $%d \n\n Refresco $%d \n\n Arroz con Leche $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 3:
+            p=80;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Chilaquiles $%d \n\n Refresco $%d \n\n Jiricalla $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+        }
+        break;
+        case 2:
+            b=60;
+            printf("  Postre  \n Que desea ordenar? \n\n 1) Pastel de chocolate $100 \n 2) Arroz con Leche $60 \n 3) Jiricalla $80\n");
+        scanf("%d",&p);
+        switch(p)
+        {
+           case 1:
+            p=100;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Chilaquiles $%d \n\n Cerveza $%d \n\n Pastel de Chocolate $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 2:
+            p=60;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Chilaquiles $%d \n\n Cerveza $%d \n\n Arroz con Leche $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 3:
+            p=80;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Chilaquiles $%d \n\n Cerveza $%d \n\n Jiricalla $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+        }
+        break;
+        case 3:
+            b=20;
+            printf("  Postre  \n Que desea ordenar? \n\n 1) Pastel de chocolate $100 \n 2) Arroz con Leche $60 \n 3) Jiricalla $80\n");
+        scanf("%d",&p);
+        switch(p)
+        {
+           case 1:
+            p=100;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Chilaquiles $%d \n\n Agua de Sabor $%d \n\n Pastel de Chocolate $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 2:
+            p=60;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Chilaquiles $%d \n\n Agua de Sabor $%d \n\n Arroz con Leche $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+            case 3:
+            p=80;
+            t=c+b+p;
+            fprintf(a,"\n\n Su orden: \n\n Chilaquiles $%d \n\n Agua de Sabor $%d \n\n Jiricalla $%d \n\n Total: %d",c,b,p,t);
+            printf("   *** Orden Recibida ***   \n\n Su total es de $%d \n\n En un momento llegara su orden, BUEN PROVECHO!!! \n\n",t);
+            break;
+        }
+        break;
+        }
+        break;
+    }
+
+fclose(a);
+return(0);
+}
